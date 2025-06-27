@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LensCraft Photography</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom CSS for animations and hover effects */
+        .photo-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .photo-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        .fade-in {
+            animation: fadeIn 1.5s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .hero-image {
+            height: 80vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        .instagram-icon {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224 202.7A53.3 53.3 0 1 0 277.3 256 53.4 53.4 0 0 0 224 202.7zm124.7-41a54 54 0 0 0-30.4-30.4c-21-8.2-71-6-93.1-6s-72 2.2-93.1 6a54 54 0 0 0-30.4 30.4c-8.2 21-6 71-6 93.1s-2.2 72 6 93.1a54 54 0 0 0 30.4 30.4c21 8.2 71 6 93.1 6s72 2.2 93.1-6a54 54 0 0 0 30.4-30.4c8.2-21 6-71 6-93.1s2.2-72-6-93.1z"/></svg>');
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-gray-800">LensCraft</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-800 hover:text-blue-600">Home</a>
+                    <a href="#gallery" class="text-gray-800 hover:text-blue-600">Gallery</a>
+                    <a href="#about" class="text-gray-800 hover:text-blue-600">About</a>
+                    <a href="#contact" class="text-gray-800 hover:text-blue-600">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu (hidden by default) -->
+    <div class="mobile-menu hidden md:hidden bg-white">
+        <a href="#home" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Home</a>
+        <a href="#gallery" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Gallery</a>
+        <a href="#about" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">About</a>
+        <a href="#contact" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-image fade-in">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6662f2e3-b45b-425d-a33e-e9207d9f4cc2.png" alt="Professional portrait photographer in studio" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+            <div class="text-center px-4">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Timeless Memories Captured</h1>
+                <p class="text-xl md:text-2xl text-white mb-8">Specializing in portrait, event and commercial photography</p>
+                <a href="#contact" class="px-8 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition duration-300">Book a Session</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Gallery</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Photo Cards -->
+                <div class="photo-card rounded-lg overflow-hidden shadow-md bg-white">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0896b347-c965-4274-b9bd-c7b1f1bcb131.png" alt="Elegant wedding couple dancing in romantic candlelit reception" class="w-full h-64 object-cover" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">Wedding Moments</h3>
+                        <p class="text-gray-600">Capturing the romance and joy of your special day.</p>
+                    </div>
+                </div>
+                
+                <div class="photo-card rounded-lg overflow-hidden shadow-md bg-white">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0fb7028b-2186-4743-a975-f9eb644cb208.png" alt="Professional portrait of business executive in corporate environment" class="w-full h-64 object-cover" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">Portrait Sessions</h3>
+                        <p class="text-gray-600">Professional portraits that tell your unique story.</p>
+                    </div>
+                </div>
+                
+                <div class="photo-card rounded-lg overflow-hidden shadow-md bg-white">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/68a501ae-684b-4cab-b367-9c90f4cc81cd.png" alt="Family of four playing together in golden sunlight at park" class="w-full h-64 object-cover" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">Family Photos</h3>
+                        <p class="text-gray-600">Cherish these moments forever with beautiful family portraits.</p>
+                    </div>
+                </div>
+                
+                <div class="photo-card rounded-lg overflow-hidden shadow-md bg-white">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0ada063e-a7aa-4b43-90c6-8cf7d09d8ed7.png" alt="Vibrant festival celebration with colorful costumes and dancing" class="w-full h-64 object-cover" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">Events</h3>
+                        <p class="text-gray-600">Documenting the excitement and energy of your special events.</p>
+                    </div>
+                </div>
+                
+                <div class="photo-card rounded-lg overflow-hidden shadow-md bg-white">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/15fea410-79eb-4a07-8f41-6f88ee9cec06.png" alt="Dramatic landscape of mountainscape with golden sunrise" class="w-full h-64 object-cover" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">Landscape</h3>
+                        <p class="text-gray-600">Stunning landscapes that capture nature's beauty.</p>
+                    </div>
+                </div>
+                
+                <div class="photo-card rounded-lg overflow-hidden shadow-md bg-white">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/82abf79e-15ee-4988-b381-c89ba7d0fe3c.png" alt="Creative product shot of luxury watch with minimalist composition" class="w-full h-64 object-cover" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">Product Shots</h3>
+                        <p class="text-gray-600">Showcase your products in their best light.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e7ac64f7-7f36-4bde-bd09-dceddc0addb4.png" alt="Professional photographer with camera standing in studio with lighting equipment" class="rounded-lg shadow-md w-full" />
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl font-bold mb-6">About Me</h2>
+                    <p class="text-gray-700 mb-4">Hi, I'm Alex Carter, a professional photographer with over 10 years of experience capturing special moments and telling stories through images.</p>
+                    <p class="text-gray-700 mb-4">My approach combines technical expertise with artistic vision to create images that are not only beautiful but also meaningful.</p>
+                    <p class="text-gray-700 mb-6">I believe that photography is about capturing authentic emotions and connections, and I strive to create images that resonate deeply with my clients.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://instagram.com/lenscraftphoto" target="_blank" class="text-blue-600 hover:text-blue-800">
+                            <span class="instagram-icon"></span> Instagram
+                        </a>
+                        <a href="https://linkedin.com/in/lenscraftphoto" target="_blank" class="text-blue-600 hover:text-blue-800">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Client Testimonials</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <p class="text-gray-700 italic mb-4">"Alex captured our wedding perfectly - every emotion, every special moment. These photos bring tears to our eyes every time we look at them."</p>
+                    <div class="flex items-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a857c727-5b9a-421d-b24b-9b71aa99873c.png" alt="Portrait of Sarah Johnson smiling" class="rounded-full w-12 h-12 object-cover" />
+                        <div class="ml-3">
+                            <p class="font-semibold">Sarah Johnson</p>
+                            <p class="text-sm text-gray-600">Wedding Client</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <p class="text-gray-700 italic mb-4">"The corporate portraits Alex took for our leadership team perfectly captured our brand identity. Professional yet approachable."</p>
+                    <div class="flex items-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/23255cb8-5da6-46bb-a754-601006b61f61.png" alt="Portrait of Michael Chen in business attire" class="rounded-full w-12 h-12 object-cover" />
+                        <div class="ml-3">
+                            <p class="font-semibold">Michael Chen</p>
+                            <p class="text-sm text-gray-600">Corporate Client</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <p class="text-gray-700 italic mb-4">"Our family photos are stunning! Alex made us all feel comfortable and captured our family's personality beautifully."</p>
+                    <div class="flex items-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/fb032199-1e9e-4fb1-9d2c-10b967b0ab3c.png" alt="Portrait of Robinson family group" class="rounded-full w-12 h-12 object-cover" />
+                        <div class="ml-3">
+                            <p class="font-semibold">The Robinsons</p>
+                            <p class="text-sm text-gray-600">Family Session</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-blue-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Get in Touch</h2>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+                    <p class="mb-4"><strong>Email:</strong> contact@lenscraftphoto.com</p>
+                    <p class="mb-4"><strong>Phone:</strong> (212) 555-1234</p>
+                    <p class="mb-4"><strong>Studio Address:</strong> 24 Artisan Street, New York, NY</p>
+                    
+                    <div class="mt-6">
+                        <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-blue-600 hover:text-blue-800">
+                                <span class="instagram-icon"></span>
+                            </a>
+                            <a href="#" class="text-blue-600 hover:text-blue-800">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                            <input type="text" id="name" name="name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                            <input type="email" id="email" name="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
+                            <select id="subject" name="subject" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
+                                <option>Wedding Photography</option>
+                                <option>Portrait Session</option>
+                                <option>Family Photography</option>
+                                <option>Event Coverage</option>
+                                <option>Commercial Work</option>
+                                <option>Other Inquiry</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                            <textarea id="message" name="message" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="px-6 py-2 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition duration-300">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
